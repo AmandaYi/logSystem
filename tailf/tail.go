@@ -70,7 +70,7 @@ func createNewTask(conf CollectConf) {
 	tails, errTail := tail.TailFile(conf.LogPath, tail.Config{
 		ReOpen: true,
 		Follow: true,
-		//Location:  &tail.SeekInfo{Offset: 0, Whence: 2},
+		Location:  &tail.SeekInfo{Offset: 0, Whence: 2},
 		MustExist: false,
 		Poll:      true,
 	})
